@@ -4,6 +4,7 @@
     <script type='text/javascript'>
       // Mettre votre code JS ici
       // la grille de cellule avec un ensemble fixe (le carré) et un clignotant
+var nb = 0;
 var monde = [
     [0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0],
@@ -84,11 +85,27 @@ var simule = function() {
 	mondeTMP = mondeVide(8,8,0);
 };
 // appelle toutes les secondes la fonction passée en premier paramètre
-for (var i=0; i<50; i++) {
-  setTimeout(function() {affiche(monde); simule(); }, 1000*i);
+
+function runAuto(){
+	nb++;
+	for (var i=0; i<50; i++) {
+		if(nb<=1){setTimeout(function() {affiche(monde); simule(); }, 1000*i);}
+
+		if(nb>1){
+			break;
+			nb==0;
+		}
+	}
+}
+
+function runManuel(){
+  affiche(monde); simule();
 }
 undefined;
+
 		   </script>
+<button id="runAuto" onClick="runAuto()">RunAuto</button>
+<button id="runManuel" onClick="runManuel()">RunManuel</button>
     <div id="GOLScreen"></div>
   </body>
 </html>
