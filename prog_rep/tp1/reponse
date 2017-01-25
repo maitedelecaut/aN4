@@ -1,0 +1,9 @@
+Exercice 1:
+	 Q1) volume max theorique de données contenues dans un datagramme UDP :
+	     	    -> longueur min. 8 (en-tête),longueur max. 65 527(cf.cours)
+         Q3) En comparant les MTU on constate que la taille optimale est 1500
+
+Exercice 2:
+	 Q1) Sur 1 terminal on fait nc -l 9876 pour ecouter
+	     Sur un second nc 127.0.0.1 9876, on va voir s'afficher ce que je
+	     vais ecrire sur le terminal 1
