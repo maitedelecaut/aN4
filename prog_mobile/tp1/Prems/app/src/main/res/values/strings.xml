@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Prems</string>
+    <string name="prompt">Votre nom ?</string>
+</resources>
