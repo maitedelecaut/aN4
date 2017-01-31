@@ -1,0 +1,30 @@
+// récupération de l'élément canvas sur lequel faire les dessins
+var canvas = document.getElementById("essai1");
+
+// récupération du contexte graphique
+var gfx    = canvas.getContext("2d");
+
+// changement de la couleur utilisé pour les dessins de figures pleines
+
+//gfx.fillStyle="rgb(155, 102, 102)";
+// affichage d'un rectangle plein sur l'ensemble du canvas
+//gfx.fillRect(20,20,150,100);
+
+for (var i=0; i<100; i++) {
+    // tirage aléatoire de la couleur
+var rd1 = Math.ceil (Math.random() * (255 - 0) + 0);
+var rd2 = Math.ceil (Math.random() * (255 - 0) + 0);
+var rd3 = Math.ceil (Math.random() * (255 - 0) + 0);
+
+gfx.fillStyle="rgb("+rd1+","+ rd2 +","+ rd3 +")";
+
+    // dessin d'un rectable placé aléatoirement sur le canvas
+var x = Math.ceil(Math.random() * (600 - 200));
+var y = Math.ceil(Math.random() * (600 - 200));
+gfx.fillRect(x,y,20,20);
+
+}
+
+//gfx.fillStyle="white";
+//gfx.fillRect(0,0,canvas.width,canvas.height);
+undefined;

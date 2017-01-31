@@ -1,0 +1,15 @@
+// récupération du contexte graphique
+var canvas = document.getElementById("essai2");
+var gfx    = canvas.getContext("2d");
+
+var chessSymbols = new Image();
+chessSymbols.src = 'chess.png';
+chessSymbols.onload = function() {
+    console.info("Chess symbols loaded !");
+
+    gfx.drawImage(chessSymbols, 0, 0, 75, 75, 0, 0, canvas.width/12, canvas.height/2);
+    
+};
+
+
+undefined;
